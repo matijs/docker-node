@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Keep node at the current LTS version v18 by ignore major version bumps
+    ignore:
+      - dependency-name: "node"
+        update-types: 
+          - "version-update:semver-major"
+
